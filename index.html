@@ -1,0 +1,53 @@
+<head>
+	<title>Ejemplo de Formulario</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ <script src="formJS.js"></script>
+ <link rel="stylesheet" href="formCSS.css">
+ 
+</head>
+<body>
+<div class="container">
+<form method="get">
+<div class="form-group">
+		<legend>Datos Personales</legend>
+    <label for="nombre">Nombre: </label>
+  
+  <input type="text" name="nombre" id="nombre" class="form-control" required placeholder="Ingrese su Nombre">
+
+	<label for="apellido">Apellido: </label><input type="text" name="apellido" id="apellido"class="form-control" required placeholder="Ingrese su Apellido">
+
+	<label for="dni">DNI: </label> <input type="text" name="dni" id="dni" maxlength="8" placeholder="Ingrese su DNI" class="form-control" required>
+ 
+  <label for="gen">Género: </label>
+  <select name="gen" id="gen">
+    <option value="Nada">...</option>
+    <option value="Masculino">Masculino</option>
+    <option value="Femenino">Femenino</option>
+    <option value="Sin especificar">Sin Especificar</option>
+  </select>
+  </p>
+     
+  <label for="fecha">Fecha de Nacimiento: </label>
+  
+  <input type="date" name="fechanac" id="fecha" class="form-control" required>
+ 
+	<button onClick="agregarFila()" type="button" class="btn btn-success">Adicionar a la tabla</button>
+</div>	
+</form>
+<input type="button" onClick="tableToExcel('tabla', 'titulo de la tabla')" value="Exportar a Excel" class="btn btn-success">
+<table id="tabla">
+  <caption>Datos del usuario</caption>
+   <th>Nombre</th>
+   <th>Apellido</th>
+   <th>DNI</th>
+   <th>Genero</th>
+   <th>Fecha</th>
+   <th>Eliminar</th>
+   
+
+</table>
+<p id="alerta"></p>
+</div>
+</body>
