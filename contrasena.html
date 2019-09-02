@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<meta charset="utf-8">
+<title>Juego Contraseña</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <!-- El logotipo y el icono que despliega el menú se agrupan
+                 para mostrarlos mejor en los dispositivos móviles -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Desplegar navegación</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Bruno Gazzo</a>
+        </div>
+    
+        <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+                 otro elemento que se pueda ocultar al minimizar la barra -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li ><a href="formBruno.html">Formulario</a></li>
+            <li><a href="curriculum.html">Curriculum Vitae</a></li>
+            <li class="active"><a href="contrasena.html">Juego</a></li>
+    
+            </li>
+          </ul>
+      </nav>
+      <div class="container">
+      <h1>Descubrir clave numerica en tres numeros</h1>
+<p>Instrucciones</p>
+<ul>
+  <li>Ingresar 3 numeros, centena, decena y unidad</li>
+  <li>No pueden ser iguales o estar vacíos, muestra alerta</li>
+  <li>Si el n° esta en la posicion correcta te lo dira</li>
+</ul>
+<div class="form-group"></div>
+<form action="post">
+  <label for="centena">Centena:</label>
+  <input type="number" id="centenaF" name="centena">
+  <label for="decena">Decena:</label>
+  <input type="number" id="decenaF" name="decena">
+  <label for="unidad">Unidad:</label>
+  <input type="number" id="unidadF" name="unidad">
+  <input type="button" value="Enviar" class="btn btn-success" onClick="adivinar()">
+  <input type="reset" value="Borrar" class="btn btn-danger" onClick="borrar()">
+</form>
+
+  <p id="alerta" ></p>
+</div>
+	</div>
+<script src="contrasenaJS.js"> </script>
+</body>
+</html>
